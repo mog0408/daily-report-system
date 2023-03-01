@@ -44,6 +44,11 @@ public class ReportView {
     private String content;
 
     /**
+     * 商談状況の内容
+     */
+    private String business;
+
+    /**
      * 登録日時
      */
     private LocalDateTime createdAt;
