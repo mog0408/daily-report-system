@@ -31,7 +31,7 @@ public class ReportValidator {
             errors.add(contentError);
         }
 
-      //内容のチェック
+      //商談状況のチェック
         String businessError = validateBusiness(rv.getBusiness());
         if (!businessError.equals("")) {
             errors.add(businessError);
