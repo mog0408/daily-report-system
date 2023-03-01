@@ -31,6 +31,12 @@ public class ReportValidator {
             errors.add(contentError);
         }
 
+      //内容のチェック
+        String businessError = validateBusiness(rv.getBusiness());
+        if (!businessError.equals("")) {
+            errors.add(businessError);
+        }
+
         return errors;
     }
 
@@ -61,4 +67,18 @@ public class ReportValidator {
         //入力値がある場合は空文字を返却
         return "";
     }
+
+    /**
+     * 商談状況に入力値があるかをチェックし、入力値がなければエラーメッセージを返却
+     * @param business 商談状況
+     * @return エラーメッセージ
+     */
+    private static String validateBusiness(String business) {
+        if (business == null || business.equals("")) {
+            return MessageConst.E_NOBUSINESS.getMessage();
+        }
+
+        //入力値がある場合は空文字を返却
+        return "";
+}
 }
